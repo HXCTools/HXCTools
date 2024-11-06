@@ -1,18 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #f3e6ff, #d6a4ff);
+    color: #3b1a5f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #9f5cf2, #6b008f);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: background 0.3s;
+    background: linear-gradient(135deg, #6b008f, #9f5cf2);
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #9f5cf2, #d6a4ff);
+}
+
 /* Main Content */
 main {
     padding: 40px;
+    width: 100%;
+    max-width: 800px;
     text-align: center;
 }
 
 /* Section Styling */
 .content, .downloads {
-    background-color: #d6a4ff;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #d6a4ff, #f3e6ff);
+    border-radius: 15px;
     padding: 20px;
     margin: 20px auto;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
-    color: #4e206e;
+    color: #3b1a5f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .content h2, .downloads h2 {
@@ -21,19 +86,20 @@ main {
 
 /* Button Styling */
 button {
-    background-color: #9f5cf2;
-    color: #fff;
-    padding: 10px 20px;
+    background: linear-gradient(135deg, #9f5cf2, #6b008f);
+    color: #ffffff;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1em;
+    transition: background 0.3s ease, transform 0.2s ease;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #6b008f;
+    background: linear-gradient(135deg, #6b008f, #9f5cf2);
+    transform: scale(1.05);
 }
 
 /* Message Styling */
@@ -50,7 +116,7 @@ button:hover {
 }
 
 .downloads li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .downloads a {
@@ -59,22 +125,47 @@ button:hover {
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: color 0.3s, border-bottom-color 0.3s;
+    background: linear-gradient(135deg, #9f5cf2, #d6a4ff);
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #ffffff;
 }
 
 .downloads a:hover {
-    color: #9f5cf2;
-    border-bottom-color: #9f5cf2;
+    background: linear-gradient(135deg, #d6a4ff, #9f5cf2);
 }
 
 /* Footer Styling */
 footer {
-    background-color: #6b008f;
-    color: #fff;
+    background: linear-gradient(135deg, #6b008f, #4e206e);
+    color: #ffffff;
     text-align: center;
     padding: 15px 0;
     font-size: 0.9em;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer p {
     margin: 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #3b1a5f, #1f0a3d);
+    color: #d6a4ff;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #4e206e, #2b0b47);
+}
+
+body.dark-mode .content, body.dark-mode .downloads {
+    background: linear-gradient(135deg, #6b008f, #4e206e);
+    color: #f0e6fa;
+}
+
+body.dark-mode footer {
+    background: linear-gradient(135deg, #2b0b47, #1f0a3d);
+    color: #d6a4ff;
 }
